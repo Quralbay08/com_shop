@@ -1,0 +1,256 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* Category and Brand List */
+h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-grid li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.product-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-grid h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.product-grid p {
+    font-size: 16px;
+    color: #777;
+}
+
+.product-grid a {
+    text-decoration: none;
+    color: #333;
+}
+
+.product-grid a:hover h3 {
+    color: #007bff;
+}
+
+/* Product Details */
+.product-detail {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-detail h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-detail p {
+    font-size: 16px;
+    color: #777;
+}
+
+.product-detail .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #007bff;
+}
+
+.product-detail .specs {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.product-detail .specs h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-detail .specs p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Comments Section */
+.comments {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.comments h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.comments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comments li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.comments p {
+    margin: 5px 0;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* General Styling for Titles */
+h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Category List Styling */
+.category-list, .brend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li, .brend-list li {
+    margin: 10px 0;
+}
+
+.category-list li a, .brend-list li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.category-list li a:hover, .brend-list li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px;
+    }
+    
+    .category-list li a, .brend-list li a {
+        font-size: 14px;
+    }
+}

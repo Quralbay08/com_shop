@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COM Shop - Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>COM Shop</h1>
+    </header>
+
+    <div class="container">
+        <h2>Categories</h2>
+        <ul>
+            {% for category in categories %}
+            <li><a href="{% url 'product_list_by_category' category.category_slug %}">{{ category.category_name }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h2>Brands</h2>
+        <ul>
+            {% for brend in brends %}
+            <li><a href="{% url 'product_list_by_brend' brend.brend_slug %}">{{ brend.brend_name }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h2>All Products</h2>
+        <ul class="product-grid">
+            {% for product in products %}
+            <li>
+                <a href="{% url 'product_detail' product.id %}">
+                    <img src="{{ product.image1.url }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>Price: {{ product.price }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 COM Shop</p>
+    </footer>
+</body>
+</html>

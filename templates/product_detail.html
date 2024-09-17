@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COM Shop - {{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>COM Shop</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-detail">
+            <img src="{{ product.image1.url }}" alt="{{ product.name }}">
+            <h1>{{ product.name }}</h1>
+            <p class="price">Price: {{ product.price }}</p>
+            <p>{{ product.discriptions }}</p>
+
+            <div class="specs">
+                <h2>Specifications</h2>
+                <p>Processor: {{ product.model_protsessor }}</p>
+                <p>RAM: {{ product.operativnaya_pamyat }} GB</p>
+                <p>Storage: {{ product.disk_xotirasi }} GB</p>
+                <p>Display: {{ product.display_olchami }} inches</p>
+            </div>
+        </div>
+
+        <div class="comments">
+            <h2>Comments</h2>
+            <ul>
+                {% for comment in comment %}
+                <li>
+                    <p>{{ comment.text }}</p>
+                    <p>By: {{ comment.username }} on {{ comment.published_date }}</p>
+                    <p>Related to: {{ comment.brend.name }}</p> <!-- Brend nomi ham ko'rsatiladi -->
+                </li>
+                {% empty %}
+                <li><p>No comments yet. Be the first to comment!</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="comment-form">
+            <h3>Add a comment</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 COM Shop</p>
+    </footer>
+</body>
+</html>
